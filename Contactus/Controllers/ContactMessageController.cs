@@ -53,7 +53,7 @@ namespace Contactus.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Username,Message")] ContactMessage contactMessage)
+        public async Task<IActionResult> Create([Bind("ID,Username,Message, PhoneNumber, Email")] ContactMessage contactMessage)
         {
             if (ModelState.IsValid)
             {
